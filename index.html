@@ -4,71 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Welcome to Khang Nguyen's GitHub</title>
+  <title>Khang Nguyen | Full-Stack Developer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f7fc;
-      color: #333;
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    /* Header Section */
     header {
-      background-color: #4CAF50;
+      background-color: #ff66b2; /* Pink background */
       color: white;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
+      position: relative;
     }
 
-    h1 {
-      font-size: 36px;
+    header h1 {
+      font-size: 42px;
       margin: 0;
+      letter-spacing: 2px;
     }
 
-    section {
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* Navigation Menu */
+    nav {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #ff66b2;
+    }
+
+    /* Profile Card Section */
+    .profile-card {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      height: 80vh;
+      margin: 50px 0;
     }
 
-    .content-container {
-      text-align: center;
-      max-width: 800px;
-      margin: 20px;
+    .profile-card img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 30px;
     }
 
+    .profile-card .info {
+      max-width: 600px;
+    }
+
+    .profile-card .info h2 {
+      font-size: 30px;
+      margin: 0;
+    }
+
+    .profile-card .info p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+
+    /* Button */
     .btn {
-      display: inline-block;
-      background-color: #007BFF;
+      background-color: #ff66b2;
       color: white;
-      padding: 15px 30px;
+      padding: 12px 30px;
+      font-size: 18px;
       border-radius: 5px;
       text-decoration: none;
-      font-size: 16px;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
+      display: inline-block;
+      transition: background-color 0.3s;
     }
 
     .btn:hover {
-      background-color: #0056b3;
+      background-color: #ff3385;
     }
 
+    /* Footer Section */
     footer {
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 20px;
       position: fixed;
       bottom: 0;
       width: 100%;
     }
 
     footer a {
-      color: white;
+      color: #ff66b2;
       text-decoration: none;
     }
 
@@ -76,28 +121,62 @@
       text-decoration: underline;
     }
 
-    .intro-text {
-      font-size: 18px;
-      margin-top: 20px;
-      line-height: 1.6;
-    }
   </style>
 </head>
 <body>
+
+  <!-- Header Section -->
   <header>
-    <h1>Welcome to Khang Nguyen's GitHub</h1>
+    <h1>Khang Nguyen</h1>
+    <p>Full-Stack Software Engineer | Computer Science Student</p>
   </header>
 
-  <section>
-    <div class="content-container">
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Profile Card Section -->
+  <section id="about" class="profile-card">
+    <img src="https://i.imgur.com/7E7VA9Z.jpeg" alt="Khang Nguyen">
+    <div class="info">
       <h2>About Me</h2>
-      <p class="intro-text">My objective is to become a full-stack software engineer. Currently, I am pursuing a degree in Computer Science at the University of Information Technology, where I have been studying for one year.</p>
+      <p>My objective is to become a full-stack software engineer. Currently, I am pursuing a degree in Computer Science at the University of Information Technology, where I have been studying for one year. I am passionate about coding and excited to explore new technologies.</p>
       <a href="https://github.com/khangnk144" class="btn" target="_blank">Visit My GitHub</a>
     </div>
   </section>
 
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <h2>Featured Projects</h2>
+      <p>Check out some of my recent projects below:</p>
+    </div>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
+      <div class="project-card" style="background: white; border-radius: 8px; padding: 20px; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <h3>Project 1</h3>
+        <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
+        <a href="#" class="btn" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" style="background: white; border-radius: 8px; padding: 20px; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <h3>Project 2</h3>
+        <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
+        <a href="#" class="btn" target="_blank">View Project</a>
+      </div>
+      <div class="project-card" style="background: white; border-radius: 8px; padding: 20px; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <h3>Project 3</h3>
+        <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
+        <a href="#" class="btn" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
   <footer>
-    <p>&copy; 2024 Khang Nguyen | <a href="https://github.com/khangnk144">GitHub Profile</a></p>
+    <p>&copy; 2024 Khang Nguyen | <a href="https://github.com/khangnk144" target="_blank">GitHub Profile</a></p>
   </footer>
+
 </body>
 </html>
