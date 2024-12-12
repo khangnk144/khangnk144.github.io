@@ -6,27 +6,38 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Khang Nguyen | Full-Stack Developer</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f9f9f9;
+    /* General Reset */
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* Header Section */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
     header {
-      background-color: #ff66b2; /* Pink background */
+      background-image: url('https://as2.ftcdn.net/v2/jpg/06/21/30/93/1000_F_621309369_7ZSQRjmlrfXk96QwmAUGaTu9iwNLz1ok.jpg'); /* Christmas image */
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 30px;
       text-align: center;
-      position: relative;
+      padding: 60px 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
       font-size: 42px;
-      margin: 0;
+      font-weight: bold;
       letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     header p {
@@ -36,80 +47,138 @@
 
     /* Navigation Menu */
     nav {
-      background-color: #333;
       display: flex;
       justify-content: center;
-      padding: 10px;
+      background-color: white;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     nav a {
-      color: white;
-      padding: 15px 20px;
       text-decoration: none;
-      font-size: 18px;
+      color: #333;
+      font-size: 16px;
       text-transform: uppercase;
-      transition: background-color 0.3s;
+      padding: 12px 30px;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      background-color: #ff66b2;
+      color: #ff66b2;
     }
 
-    /* Profile Card Section */
-    .profile-card {
+    /* About Section */
+    #about {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 50px 0;
+      padding: 80px 20px;
+      background-color: #fff;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .profile-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 900px;
+      background-color: #fff;
+      padding: 40px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
     }
 
     .profile-card img {
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       margin-right: 30px;
-    }
-
-    .profile-card .info {
-      max-width: 600px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .profile-card .info h2 {
       font-size: 30px;
-      margin: 0;
+      margin-bottom: 10px;
     }
 
     .profile-card .info p {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.6;
-      margin-top: 20px;
+      margin-bottom: 20px;
     }
 
-    /* Button */
-    .btn {
+    .profile-card .btn {
       background-color: #ff66b2;
       color: white;
-      padding: 12px 30px;
-      font-size: 18px;
-      border-radius: 5px;
+      padding: 10px 25px;
       text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
 
-    .btn:hover {
+    .profile-card .btn:hover {
       background-color: #ff3385;
     }
 
-    /* Footer Section */
+    /* Projects Section */
+    #projects {
+      padding: 80px 20px;
+      background-color: #f7f7f7;
+      text-align: center;
+    }
+
+    #projects h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .project-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .project-card {
+      background-color: white;
+      padding: 30px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .project-card .btn {
+      background-color: #ff66b2;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Footer */
     footer {
-      background-color: #333;
+      background-color: #111;
       color: white;
       text-align: center;
       padding: 20px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      margin-top: 50px;
     }
 
     footer a {
@@ -120,7 +189,6 @@
     footer a:hover {
       text-decoration: underline;
     }
-
   </style>
 </head>
 <body>
@@ -138,34 +206,33 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Profile Card Section -->
-  <section id="about" class="profile-card">
-    <img src="https://i.imgur.com/7E7VA9Z.jpeg" alt="Khang Nguyen">
-    <div class="info">
-      <h2>About Me</h2>
-      <p>My objective is to become a full-stack software engineer. Currently, I am pursuing a degree in Computer Science at the University of Information Technology, where I have been studying for one year. I am passionate about coding and excited to explore new technologies.</p>
-      <a href="https://github.com/khangnk144" class="btn" target="_blank">Visit My GitHub</a>
+  <!-- Profile Section -->
+  <section id="about">
+    <div class="profile-card">
+      <img src="https://i.imgur.com/7E7VA9Z.jpeg" alt="Khang Nguyen">
+      <div class="info">
+        <h2>About Me</h2>
+        <p>My objective is to become a full-stack software engineer. Currently, I am pursuing a degree in Computer Science at the University of Information Technology. I'm passionate about coding and excited to explore new technologies.</p>
+        <a href="https://github.com/khangnk144" class="btn" target="_blank">Visit My GitHub</a>
+      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <div style="text-align: center; margin-bottom: 30px;">
-      <h2>Featured Projects</h2>
-      <p>Check out some of my recent projects below:</p>
-    </div>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
-      <div class="project-card" style="background: white; border-radius: 8px; padding: 20px; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
         <h3>Project 1</h3>
         <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
         <a href="#" class="btn" target="_blank">View Project</a>
       </div>
-      <div class="project-card" style="background: white; border-radius: 8px; padding: 20px; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <div class="project-card">
         <h3>Project 2</h3>
         <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
         <a href="#" class="btn" target="_blank">View Project</a>
       </div>
-      <div class="project-card" style="background: white; border-radius: 8px; padding: 20px; width: 250px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <div class="project-card">
         <h3>Project 3</h3>
         <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
         <a href="#" class="btn" target="_blank">View Project</a>
