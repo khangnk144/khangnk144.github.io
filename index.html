@@ -15,8 +15,8 @@
 
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
+      background-color: #0A1D37; /* Dark Blue background */
+      color: #D1D8E0; /* Light grayish-white text */
       line-height: 1.6;
       margin: 0;
       padding: 0;
@@ -24,68 +24,69 @@
 
     /* Header */
     header {
-      background-image: url('https://as2.ftcdn.net/v2/jpg/06/21/30/93/1000_F_621309369_7ZSQRjmlrfXk96QwmAUGaTu9iwNLz1ok.jpg'); /* Christmas image */
-      background-size: cover;
-      background-position: center;
+      background-color: #4B88A2; /* Muted Light Cyan for the header background */
       color: white;
-      text-align: center;
       padding: 60px 20px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center; /* Center the content horizontally */
+      align-items: center; /* Center the content vertically */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
     header h1 {
-      font-size: 42px;
+      font-size: 40px;
       font-weight: bold;
-      letter-spacing: 2px;
       text-transform: uppercase;
+      text-align: center;
     }
 
     header p {
-      font-size: 18px;
+      font-size: 16px;
+      text-align: center;
       margin-top: 10px;
     }
 
-    /* Navigation Menu */
+    /* Navigation */
     nav {
       display: flex;
-      justify-content: center;
-      background-color: white;
-      padding: 15px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      background-color: #1F2B3D; /* Darker Blue for the side navigation */
+      width: 200px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      padding-top: 100px;
     }
 
     nav a {
       text-decoration: none;
-      color: #333;
-      font-size: 16px;
+      color: #D1D8E0; /* Light grayish-white for links */
+      font-size: 18px;
+      padding: 12px 0;
       text-transform: uppercase;
-      padding: 12px 30px;
-      transition: color 0.3s;
+      transition: background-color 0.3s;
     }
 
     nav a:hover {
-      color: #ff66b2;
+      background-color: #4B88A2; /* Light cyan hover effect */
+      color: white;
     }
 
-    /* About Section */
-    #about {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 80px 20px;
-      background-color: #fff;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    /* Content Section */
+    .content {
+      margin-left: 220px;
+      padding: 80px 40px;
     }
 
-    .profile-card {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 900px;
-      background-color: #fff;
-      padding: 40px;
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    .profile-card, .project-card {
+      background-color: #1F2B3D; /* Darker blue for the cards */
+      padding: 30px;
+      margin-bottom: 30px;
       border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
     .profile-card img {
@@ -93,96 +94,86 @@
       height: 120px;
       border-radius: 50%;
       margin-right: 30px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     }
 
-    .profile-card .info h2 {
-      font-size: 30px;
+    .profile-card h2 {
+      font-size: 32px;
       margin-bottom: 10px;
+      color: #4B88A2; /* Light cyan heading color */
     }
 
-    .profile-card .info p {
+    .profile-card p {
       font-size: 16px;
-      line-height: 1.6;
+      color: #A3B1C6; /* Lighter gray text */
       margin-bottom: 20px;
     }
 
     .profile-card .btn {
-      background-color: #ff66b2;
+      background-color: #4B88A2;
       color: white;
-      padding: 10px 25px;
+      padding: 12px 25px;
       text-decoration: none;
       border-radius: 5px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s;
     }
 
     .profile-card .btn:hover {
-      background-color: #ff3385;
+      background-color: #3A6D87; /* Darker cyan for hover effect */
     }
 
     /* Projects Section */
-    #projects {
-      padding: 80px 20px;
-      background-color: #f7f7f7;
-      text-align: center;
-    }
-
-    #projects h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
+    .projects-section {
+      margin-top: 50px;
     }
 
     .project-cards {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .project-card {
-      background-color: white;
-      padding: 30px;
-      width: 280px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      border-radius: 10px;
-      text-align: left;
-      transition: transform 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
     }
 
     .project-card h3 {
       font-size: 24px;
       margin-bottom: 15px;
+      color: #4B88A2;
     }
 
     .project-card p {
       font-size: 14px;
       margin-bottom: 20px;
       line-height: 1.6;
+      color: #A3B1C6;
     }
 
     .project-card .btn {
-      background-color: #ff66b2;
+      background-color: #4B88A2;
       color: white;
       padding: 10px 20px;
       text-decoration: none;
       border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .project-card .btn:hover {
+      background-color: #3A6D87;
+      color: white;
     }
 
     /* Footer */
     footer {
-      background-color: #111;
+      background-color: #1F2B3D;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 50px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
     }
 
     footer a {
-      color: #ff66b2;
+      color: #4B88A2;
       text-decoration: none;
     }
 
@@ -195,8 +186,10 @@
 
   <!-- Header Section -->
   <header>
-    <h1>Khang Nguyen</h1>
-    <p>Full-Stack Software Engineer | Computer Science Student</p>
+    <div>
+      <h1>Khang Nguyen</h1>
+      <p>Full-Stack Software Engineer | Computer Science Student</p>
+    </div>
   </header>
 
   <!-- Navigation Menu -->
@@ -206,39 +199,42 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Profile Section -->
-  <section id="about">
-    <div class="profile-card">
-      <img src="https://i.imgur.com/7E7VA9Z.jpeg" alt="Khang Nguyen">
-      <div class="info">
-        <h2>About Me</h2>
-        <p>My objective is to become a full-stack software engineer. Currently, I am pursuing a degree in Computer Science at the University of Information Technology. I'm passionate about coding and excited to explore new technologies.</p>
-        <a href="https://github.com/khangnk144" class="btn" target="_blank">Visit My GitHub</a>
+  <!-- Main Content Section -->
+  <div class="content">
+    <!-- Profile Section -->
+    <section id="about" class="profile-card">
+      <div style="display: flex; align-items: center;">
+        <img src="https://i.imgur.com/7E7VA9Z.jpeg" alt="Khang Nguyen">
+        <div>
+          <h2>About Me</h2>
+          <p>My objective is to become a full-stack software engineer. Currently, I am pursuing a degree in Computer Science at the University of Information Technology. I'm passionate about coding and excited to explore new technologies.</p>
+          <a href="https://github.com/khangnk144" class="btn" target="_blank">Visit My GitHub</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <div class="project-cards">
-      <div class="project-card">
-        <h3>Project 1</h3>
-        <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
-        <a href="#" class="btn" target="_blank">View Project</a>
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <h2>Featured Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
+          <a href="#" class="btn" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
+          <a href="#" class="btn" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
+          <h3>Project 3</h3>
+          <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
+          <a href="#" class="btn" target="_blank">View Project</a>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Project 2</h3>
-        <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
-        <a href="#" class="btn" target="_blank">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3>Project 3</h3>
-        <p>A brief description of this project goes here. It could be a web application, mobile app, or anything interesting!</p>
-        <a href="#" class="btn" target="_blank">View Project</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- Footer Section -->
   <footer>
